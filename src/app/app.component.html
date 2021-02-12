@@ -1,0 +1,14 @@
+<div style="margin: 10px">
+	<button (click)="saveFilterValue()" class="ui button">Save filter!</button>
+	<button (click)="restoreFilterValue()" class="ui button">Restore filter!</button>
+  	<button (click)="print()" class="ui button">print</button>
+</div>
+<div style="margin: 10px">
+	<h1>Saved Filters:</h1>
+
+	<ul>
+		<li *ngFor="let filter of savedFilters" (click)="restoreFilterValue(filter.name)" style="font-size: 30px; cursor: pointer">{{filter.name}}</li>
+	</ul>
+</div>
+
+<app-grid></app-grid>
